@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    <script>
+        let a = 7;
+        let b = new Number(4);
+        let c = 4.56;
+        let d = "2.31";
+
+        console.log(a,b);
+        console.log(a+b);
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(4));
+        console.log(parseInt(c));
+        console.log(parseFloat(c));
+        console.log(a+d);
+        console.log(a + parseInt(d));
+        console.log(a + parseFloat(d));
+        console.log(typeof d, typeof a);
+
+        //Valores Booleanos
+        console.log("*****Numeros Booleanos******");
+
+        let verdadero = true;
+        let falso = false;
+        let v = Boolean(true);
+        let f = Boolean(false);
+
+        console.log(verdadero, falso);
+        console.log(typeof verdadero, typeof falso);
+        console.log(v,f);
+
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+        console.log(Boolean(" "));
+        console.log(Boolean(-3));
+
+        //undefined, null, NaN
+        console.log("Undefined, Null, NaN");
+
+        let indefinido;
+        let nulo = null;
+        let noEsUnNumero = "hola" * 3.12;
+
+        console.log(indefinido);
+        console.log(nulo);
+        console.log(noEsUnNumero);
+    </script>
+</body>
+</html>

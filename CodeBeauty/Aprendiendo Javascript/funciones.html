@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JAVASCRIPT BASICS</title>
+</head>
+<body>
+    <script>
+        //******INDEX**********
+         /* var hola = "Hola Mundo";
+        let hello = "Hello World";
+        console.log(hola);
+        console.log(hello);
+        console.log(window);
+        console.log(window.hola);
+        console.log(window.hello);
+
+        console.log("*********var**********");
+        var musica = "Rock";
+        console.log("Variable antes del bloque: ", musica);
+        {
+            var musica = "Pop";
+            console.log("Variable en el bloque: ", musica);
+        }
+        console.log("Variable despues del bloque: ",musica);
+        
+        console.log("********let**********");
+        let musica2 = "Rock";
+        console.log("Variable antes del bloque: ", musica2);
+        {
+            let musica2 = "Pop";
+            console.log("Variable en el bloque: ", musica2);
+        }
+        console.log("Variable despues del bloque: ",musica2);
+
+        let a;
+        const PI = 3.14159;
+        console.log(PI);
+        //PI = 3;
+        a="Celeste";
+        console.log(a);
+
+        const objeto = {
+            nombre: "Celeste",
+            edad: 19
+        }
+        //console.log(objeto);
+
+        const cadena = [
+            "rojo","naranja","azul"
+        ]
+        //console.log(cadena)
+
+        objeto.telefono = 36448492579;
+        console.log(objeto);
+
+        cadena.push ("verde", "marron");
+        console.log(cadena)
+
+        ******STRINGS*************
+        let nombre = "Celeste";
+        let apellido = 'MarRodi';
+        let saludo = new String("Hola mundo");
+        let lorem = "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. ";
+
+        console.log(nombre,apellido,saludo);
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length,
+            nombre.toUpperCase(),
+            apellido.toLowerCase()
+        )
+
+        console.log(
+            lorem.includes("texto"),
+            lorem.includes("Celeste"),
+            lorem.trim(),
+            lorem.split(" ")
+        )
+
+        let nombre2 = "Celeste";
+        let apellido2 = "Martin Rodich";
+        //Concatenacion
+        let saludo2 = "Hola a todxs, yo soy "+nombre+" "+apellido2+".";
+        console.log(saludo2);
+        //Template String
+        let saludo3 = `Hola mi nombre es ${nombre2} ${apellido2}.`;
+        console.log(saludo3);
+
+        let ul = `<ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+        </ul>`;
+        console.log(ul);
+
+        **********NUMBERS***************
+        
+        let a = 7;
+        let b = new Number(4);
+        let c = 4.56;
+        let d = "2.31";
+
+        console.log(a,b);
+        console.log(a+b);
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(4));
+        console.log(parseInt(c));
+        console.log(parseFloat(c));
+        console.log(a+d);
+        console.log(a + parseInt(d));
+        console.log(a + parseFloat(d));
+        console.log(typeof d, typeof a);
+
+        //Valores Booleanos
+        console.log("*****Numeros Booleanos******");
+
+        let verdadero = true;
+        let falso = false;
+        let v = Boolean(true);
+        let f = Boolean(false);
+
+        console.log(verdadero, falso);
+        console.log(typeof verdadero, typeof falso);
+        console.log(v,f);
+
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+        console.log(Boolean(" "));
+        console.log(Boolean(-3));
+
+        //undefined, null, NaN
+        console.log("Undefined, Null, NaN");
+
+        let indefinido;
+        let nulo = null;
+        let noEsUnNumero = "hola" * 3.12;
+
+        console.log(indefinido);
+        console.log(nulo);
+        console.log(noEsUnNumero);
+
+        //*******FuncTion*******
+        function estoEsUnaFuncion(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        //declarando la funcion
+        estoEsUnaFuncion();
+
+        console.log("**********************")
+        function devolviendoValor(){
+            console.log("Uno");
+            return 16;
+            console.log("Dos");
+            console.log("Tres");
+            return "La funcion devuelve una cadena de texto";
+        }
+
+        let devolviendoValor2 = devolviendoValor();
+        console.log(devolviendoValor2);
+
+
+        function formulario(nombre,edad,carrera){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad}, estoy estudiando ${carrera} y te deseo un buen dia.`);
+        }
+
+        let nombre = "Celeste";
+        let edad = 19;
+        let carrera = "Ingenieria en sistemas";
+
+        formulario(nombre,edad,carrera);
+
+        //Funciones declaradas VS Funciones expresadas
+
+        funciones();
+
+        
+
+        function funciones() {
+            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada");
+        }
+
+        funciones();
+
+        //funcion anonima
+        const funcionExpresada = function(){
+            console.log("Esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dira...");
+        }
+
+        
+        funcionExpresada();
+
+        //**********ARRAYS**************
+
+        const a = [];
+        const b = [1, "Hola", false, [1,2,3]];
+        console.log(a);
+        console.log(b);
+        console.log(b[2]);
+        console.log(b[3][2]);
+
+        const c = Array.of("A", "B", "C", 3,4,5);
+        console.log(c);
+
+        const d = Array(20).fill(2);
+        console.log(d);
+        console.log(d.length);
+
+        const e = new Array();
+        console.log(e);
+
+        const f = new Array(1,2,3);
+        console.log(f);
+
+        const colores = ["Rojo", "Verde", "Azul"];
+        console.log(colores);
+
+        colores.push("Negro");
+        console.log(colores);
+
+        colores.pop();
+        console.log(colores);
+
+        colores.forEach(function(el, index){
+            console.log(`<li id="${index}"> ${el} </li>`)
+        });
+
+        //*************OBJECTS******************
+
+        let a = {};
+        console.log(a);
+
+        const b = {};
+        console.log(b);
+
+        const cele = {
+            nombre: "Celeste",
+            apellido: "Martin Rodich",
+            edad: 19,
+            sexo: "femenino",
+            genero: "no-binario",
+            contacto: {
+                email: "cmartinrodich@gmail.com",
+                instagram: "celeste_220902",
+                telefono: "3644478392743"
+            }, 
+            pasatiempo: ["Bailar","Salir de joda", "Leer", "Programar"],
+            soltera: false,
+            saludar: function (){
+                console.log("Hola :)");
+            }
+        }
+        console.log(cele);
+        console.log(cele.contacto.telefono);
+        console.log(cele.pasatiempo[2]);
+        console.log(`Hola mi nombre es ${cele.nombre}`);
+        cele.saludar();
+        console.log(Object.keys(cele));
+        console.log(Object.values(cele));
+        console.log(cele.hasOwnProperty("nombre"));
+        console.log(cele.hasOwnProperty("estacion"));
+
+        //*********OPERADORES***********
+        //  ARITMETICOS + - * / % {} 
+
+        let a = 10 + 30 * 4 - 2 ;
+        let modulo = 5 % 2;
+
+        console.log(a);
+        console.log(modulo);
+
+        // RELACIONALES <, >, <=, >=, ==, ===, !=, !==
+
+        let b = 10, c=20, d = 10, f=10;
+        
+
+        console.log(b > c);
+        console.log(b < c);
+        console.log(b <= c);
+        console.log(b >= c);
+        console.log(b == d);
+        console.log(b === c);
+        console.log(b===f);
+
+        console.log(7 == 7);
+        console.log(7 == "7");
+        console.log(("") == false);
+
+        console.log(7 === 7);
+        console.log(7 === "7");
+        console.log(("") === false);
+
+
+        //INCREMENTO - DECREMENTO
+        b += c;
+        console.log(b);
+
+        
+        //OPERADOR UNITARIO
+        let h=2;
+        h++;
+        console.log(h);
+
+        //LOGICO ! , || , &&
+        console.log(!true);
+        console.log(!false);
+        console.log((9===9)||("9"===9));
+        console.log((9===9)&&("9"===9));
+
+        //**********CONDICIONALES******************
+
+        let edad = 21;
+        
+        if(edad >= 18){
+            console.log("Eres mayor de edad");
+        } else {
+            console.log("Eres menor de edad");
+        }
+
+       /* Dejame dormir - 0am-6am
+        A levantarse dijo la rana - 6am-12pm
+        Toca siesta - 12pm-18pm
+        Cachengue reguetonero - 18pm-22pm
+        Devorando la heladera - 22pm-0am
+
+        let hora = 70;
+
+        if ((hora>=0)&&(hora<6)||(hora===24)){
+            console.log("Dejame dormir");
+        }
+        else if  ((hora>=6)&&(hora<12)){
+            console.log("A levantarse dijo la rana");
+        }
+        else if  ((hora>=12)&&(hora<18)){
+            console.log("Toca siesta");
+        }
+        else if  ((hora>=18)&&(hora<22)){
+            console.log("Cachengue reguetonero");
+        }
+        else if  ((hora>=22)&&(hora<24)){
+            console.log("Devorando la heladera");
+        }
+        else {
+            console.log("Usted esta bien pendejo");
+        }
+
+        //Operador ternario
+        //(condicion)? verdadero : falso;
+
+        console.log("Operador ternario");
+        let eresMayor = (edad<=17)
+        ?"Eres menor de edad"
+        :"Eres mayor de edad";
+        console.log(eresMayor);
+
+        //Switch
+
+        let a = 6;
+
+        switch(a){
+            case 1: console.log("You are a Capricorn");break;
+            case 2: console.log("You are a Gemini");break;
+            case 3: console.log("You are a Cancer");break;
+            case 4: console.log("You are an Aries");break;
+            default: console.log("You are nothing");break;
+        }
+
+        //*****LOOPS*******
+
+        let contador = 1, contador2 = 1;
+
+        console.log("While");
+        while(contador<10){
+            console.log(contador);
+            contador++;
+        };
+
+        console.log("Do While");
+        do{
+            console.log(contador2);
+            contador2++;
+        } while (contador2<10);
+
+        for (let i = 0; i < 10; i++) {
+            console.log("for "+ i);
+        }
+
+        let numeros = [10,20,30,40,50,60,70,80,90,100];
+        
+
+        console.log("Recorriendo un arreglo");
+        for (let i = 0; i < numeros.length ; i++) {
+            console.log("for " + numeros[i]);
+        }
+
+        for (let i = 9; i >= 0 ; i--) {
+            console.log("for " + numeros[i]);
+        }
+
+        let cele = {
+            nombre : "Celeste",
+            edad : 19,
+            ciudad: "Saenz Peña"
+        }
+
+        for (const propiedad in cele) {
+            console.log(`Key: ${propiedad}, Value: ${cele[propiedad]}`)
+        }
+
+        for (const elemento of numeros) {
+            console.log(elemento);
+        }
+
+        let cadena = "Hola mundo";
+
+        for (const caracter of cadena) {
+            console.log(caracter);
+        }*/
+
+        //MANEJO DE ERRORES
+
+        try {
+            console.log("Try se pone el codigo a evaluar");
+            noExisto;
+        } catch (error) {
+            console.log("El Catch aparecerá cuando haya un error");
+            console.log(error);
+        } finally{
+            console.log("En el Finally ni idea que pasa");
+        }  
+        
+        try {
+            let numero = "y";
+
+            if(isNaN(numero)){
+                throw new Error("El caracter no es un numero");
+            }
+
+            console.log(numero*numero);
+        }catch(error){
+            console.log(`Se produjo el siguiente error: ${error}`)
+        }
+
+    </script>
+    <ul class="nav-menu">
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">INDEX</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">STRINGS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">NUMBERS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">FUNCTIONS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">ARRAYS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">OBJECTS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">OPERATIONS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">CONDITIONALS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">LOOPS</a></li>
+        <li class="nav-menu-items"><a href="#" class="nav-menu-link">CONTROL DE ERRORES</a></li>
+    </ul>
+</body>
+</html>
+

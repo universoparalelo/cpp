@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    
+    <script>
+        let nombre = "Celeste";
+        let apellido = 'MarRodi';
+        let saludo = new String("Hola mundo");
+        let lorem = "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. ";
+
+        console.log(nombre,apellido,saludo);
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length,
+            nombre.toUpperCase(),
+            apellido.toLowerCase()
+        )
+
+        console.log(
+            lorem.includes("texto"),
+            lorem.includes("Celeste"),
+            lorem.trim(),
+            lorem.split(" ")
+        )
+
+        let nombre2 = "Celeste";
+        let apellido2 = "Martin Rodich";
+        //Concatenacion
+        let saludo2 = "Hola a todxs, yo soy "+nombre+" "+apellido2+".";
+        console.log(saludo2);
+        //Template String
+        let saludo3 = `Hola mi nombre es ${nombre2} ${apellido2}.`;
+        console.log(saludo3);
+
+        let ul = `<ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+        </ul>`;
+        console.log(ul);
+    </script>
+</body>
+</html>
